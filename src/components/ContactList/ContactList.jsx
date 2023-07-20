@@ -17,23 +17,28 @@ export const ContactList = () => {
   if (filteredContacts.length === 0) {
     return <h2>no contacts found</h2>;
   }
-
+  
   return (
     <ul className={css.list}>
-      {filteredContacts.map(({ id, name, phone }) => (
-        <li className={css.item} key={id}>
-          {name + " : " + phone}
-          {
-            <button
-              type="button"
-              name="delete"
-              onClick={() => handleDelete(id)}
-            >
-              delete
-            </button>
-          }
-        </li>
-      ))}
+      {filteredContacts.map(({ id, name, phone }) => {
+        // if (number === undefined) {
+        //   return number !== undefined;
+        // }
+        return (
+          <li className={css.item} key={id}>
+            {name + " : " + phone}
+            {
+              <button
+                type="button"
+                name="delete"
+                onClick={() => handleDelete(id)}
+              >
+                delete
+              </button>
+            }
+          </li>
+        );
+      })}
     </ul>
   );
 };

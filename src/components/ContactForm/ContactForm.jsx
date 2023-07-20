@@ -28,7 +28,7 @@ export const ContactForm = () => {
     }
 
     dispatch(addContact(contact));
-    ContactForm.reset();
+    e.reset();
   };
   return (
     <form onSubmit={handleSubmit} className={css.formWrapper}>
