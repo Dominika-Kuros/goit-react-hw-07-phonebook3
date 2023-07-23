@@ -22,7 +22,7 @@ export const ContactList = () => {
     <ul className={css.list}>
       {filteredContacts.map(({ id, name, phone }) => {
         // if (number === undefined) {
-        //   return number !== undefined;
+        //   return number;
         // }
         return (
           <li className={css.item} key={id}>

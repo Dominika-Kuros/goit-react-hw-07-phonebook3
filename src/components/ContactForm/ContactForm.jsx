@@ -8,7 +8,6 @@ import { toast } from "react-toastify";
 
 export const ContactForm = () => {
   const contacts = useSelector(selectContacts);
-
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
